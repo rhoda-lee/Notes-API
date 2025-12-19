@@ -21,9 +21,14 @@ class UserUpdate(UserBase):
 """Notes Schema"""
 class NoteBase(BaseModel):
     id: int
-    title: str | None = None
+    title: str = "Untitled"
     content: str | None = None
     label: str | None = None
 
 class NoteCreate(NoteBase):
-    pass
+    title: str = "Untitled"
+
+class NoteUpdate(NoteBase):
+    title: str = "Untitled"
+    content: str | None = None
+    label: str | None = None
